@@ -1,0 +1,24 @@
+
+baseurl = "https://www.spacetimetransit.netlify.com"
+title = "Space, Time, and Transit"
+author = "Raven McKnight"
+canonifyurls = true
+languagecode = "en"
+theme = "black-and-light"
+
+pygmentsstyle       = "bw"
+pygmentscodefences  = true
+
+[params]
+  sitename = "Space, Time, Transit"
+  disableWebFonts = false
+
+[[menu.main]]
+    name = "About"
+    url  = "#about"
+[[menu.main]]
+    name = "Personal Site"
+    url  = "https://ravenmcknight.com"
+[[menu.main]]
+    name = ""
+    url  = "https://github.com/davidhampgonsalves/hugo-black-and-light-theme"

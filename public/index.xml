@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Space, Time, and Transit</title>
+    <link>/</link>
+    <description>Recent content on Space, Time, and Transit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 29 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Motivation</title>
+      <link>/post/motivation/</link>
+      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/motivation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About This Project</title>
+      <link>/post/about-this-project/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/about-this-project/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

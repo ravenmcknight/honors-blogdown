@@ -1,0 +1,11 @@
+---
+title: "Motivation"
+author: "Raven McKnight"
+date: 2019-09-29
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
