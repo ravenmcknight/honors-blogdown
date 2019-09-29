@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Space, Time, and Transit</title>
-    <link>/categories/r/</link>
-    <description>Recent content in R on Space, Time, and Transit</description>
+    <title>Aggregation on Space, Time, and Transit</title>
+    <link>/tags/aggregation/</link>
+    <description>Recent content in Aggregation on Space, Time, and Transit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 29 Sep 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/aggregation/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Motivation</title>
-      <link>/post/motivation/</link>
-      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/motivation/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Spatial Aggregation</title>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+
+    
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400' rel='stylesheet' type='text/css'>
+    
+
+    <link rel="icon" type="image/png" href="/favicon_16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
+
+    <title>
+      
+      
+         The Data 
+      
+    </title>
+    <link rel="canonical" href="/post/the-data/">
+
+    <style>
+  * {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    vertical-align:baseline;
+    margin:0;
+    padding:0;
+    color: black;
+    text-decoration-skip: ink;
+  }
+
+  body {
+    font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
+    font-size:17px;
+    line-height:160%;
+    color:#1d1313;
+    max-width:700px;
+    margin:auto;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  a img {
+    border:none;
+  }
+
+  img {
+    margin: 10px auto 10px auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  .left-justify {
+    float: left;
+  }
+
+  .right-justify {
+    float:right;
+  }
+
+  pre, code {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+  }
+
+  code {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    word-wrap: normal;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+  }
+
+  pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code::before,
+  pre code::after {
+    content: normal;
+  }
+
+  em,q,em,dfn {
+    font-style:italic;
+  }
+
+  .sans,html .gist .gist-file .gist-meta {
+    font-family:"Open Sans","Myriad Pro",Myriad,sans-serif;
+  }
+
+  .mono,pre,code,tt,p code,li code {
+    font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+  }
+
+  .heading,.serif,h1,h2,h3 {
+    font-family:"Old Standard TT",serif;
+  }
+
+  strong {
+    font-weight:600;
+  }
+
+  q:before {
+    content:"\201C";
+  }
+
+  q:after {
+    content:"\201D";
+  }
+
+  del,s {
+    text-decoration:line-through;
+  }
+
+  blockquote {
+    font-family:"Old Standard TT",serif;
+    text-align:center;
+    padding:50px;
+  }
+
+  blockquote p {
+    display:inline-block;
+    font-style:italic;
+  }
+
+  blockquote:before,blockquote:after {
+    font-family:"Old Standard TT",serif;
+    content:'\201C';
+    font-size:35px;
+    color:#403c3b;
+  }
+
+  blockquote:after {
+    content:'\201D';
+  }
+
+  hr {
+    width:40%;
+    height: 1px;
+    background:#403c3b;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size:35px;
+  }
+
+  h2 {
+    font-size:28px;
+  }
+
+  h3 {
+    font-size:22px;
+    margin-top:18px;
+  }
+
+  h1 a,h2 a,h3 a {
+    text-decoration:none;
+  }
+
+  h1,h2 {
+    margin-top:28px;
+  }
+
+  #sub-header, time {
+    color:#403c3b;
+    font-size:13px;
+  }
+
+  #sub-header {
+    margin: 0 4px;
+  }
+
+  #nav h1 a {
+    font-size:35px;
+    color:#1d1313;
+    line-height:120%;
+  }
+
+  .posts_listing a,#nav a {
+    text-decoration: none;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  ul li {
+    margin-left: 5px;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+  ul li:before {
+    content:"\00BB \0020";
+  }
+
+  #nav ul li:before, .posts_listing li:before {
+    content:'';
+    margin-right:0;
+  }
+
+  #content {
+    text-align:left;
+    width:100%;
+    font-size:15px;
+    padding:60px 0 80px;
+  }
+
+  #content h1,#content h2 {
+    margin-bottom:5px;
+  }
+
+  #content h2 {
+    font-size:25px;
+  }
+
+  #content .entry-content {
+    margin-top:15px;
+  }
+
+  #content time {
+    margin-left:3px;
+  }
+
+  #content h1 {
+    font-size:30px;
+  }
+
+  .highlight {
+    margin: 10px 0;
+  }
+
+  .posts_listing {
+    margin:0 0 50px;
+  }
+
+  .posts_listing li {
+    margin:0 0 25px 15px;
+  }
+
+  .posts_listing li a:hover,#nav a:hover {
+    text-decoration: underline;
+  }
+
+  #nav {
+    text-align:center;
+    position:static;
+    margin-top:60px;
+  }
+
+  #nav ul {
+    display: table;
+    margin: 8px auto 0 auto;
+  }
+
+  #nav li {
+    list-style-type:none;
+    display:table-cell;
+    font-size:15px;
+    padding: 0 20px;
+  }
+
+  #links {
+    margin: 50px 0 0 0;
+  }
+
+  #links :nth-child(2) {
+    float:right;
+  }
+
+  #not-found {
+    text-align: center;
+  }
+
+  #not-found a {
+    font-family:"Old Standard TT",serif;
+    font-size: 200px;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 225px;
+  }
+
+  @media (max-width: 750px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:28px;
+    }
+
+    #nav li {
+      font-size:13px;
+      padding: 0 15px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:50px;
+      font-size:14px;
+    }
+
+    #content h1 {
+      font-size:25px;
+    }
+
+    #content h2 {
+      font-size:22px;
+    }
+
+    .posts_listing li div {
+      font-size:12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:22px;
+    }
+
+    #nav li {
+      font-size:12px;
+      padding: 0 10px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:20px;
+      font-size:12px;
+    }
+
+    #content h1 {
+      font-size:20px;
+    }
+
+    #content h2 {
+      font-size:18px;
+    }
+
+    .posts_listing li div{
+      font-size:12px;
+    }
+  }
+</style>
+
+
+    
+  </head>
+
+  <body>
+    <section id=nav>
+      <h1><a href="/">Space, Time, Transit</a></h1>
+      <ul>
+        
+          <li><a href="https://github.com/davidhampgonsalves/hugo-black-and-light-theme"></a></li>
+        
+          <li><a href="#about">About</a></li>
+        
+          <li><a href="https://ravenmcknight.com">Personal Site</a></li>
+        
+      </ul>
+    </section>
+
+
+<section id=content>
+  <h1> The Data </h1>
+
+  
+
+  <div class="entry-content">
+    
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+
+
+<div id="the-data" class="section level1">
+<h1>The Data</h1>
+<div id="metro-transit-data" class="section level2">
+<h2>Metro Transit Data</h2>
+<p>The ridership variable for this anlysis comes from <a href="https://www.metrotransit.org/home">Metro Transit’s</a> schedule, Automatic Passenger Count (APC), and Automatic Vehicle Location (AVL) data. APC and AVL data are counted by sensors on active vehicles.</p>
+<div id="cleaning" class="section level3">
+<h3>Cleaning</h3>
+<p>Data was pulled from Metro Transit databases for trips ocurring between January 1, 2015 and December 31, 2018. The APC data consists of records of boarding and alighting each time a bus makes a stop and opens its doors. Boardings and alightings are counted by a beam of light across the doorway being broken when riders enter or exit. The APC data for 2015-2018 consists of approximately 492 billion rows. A single observation in the APC data looks like this:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">date_key</th>
+<th align="left">line_id</th>
+<th align="left">line_direction</th>
+<th align="left">service_id</th>
+<th align="right">site_id</th>
+<th align="right">board</th>
+<th align="right">alight</th>
+<th align="left">interpolated</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">20150101</td>
+<td align="left">5</td>
+<td align="left">South</td>
+<td align="left">HOL</td>
+<td align="right">34</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="left">FALSE</td>
+</tr>
+</tbody>
+</table>
+<p>This data is sparse, with many boardings and alightings of 0.</p>
+<p>Automatically collected data is inherently faulty, so there is no guarantee that the APC records contain <em>all</em> trips run. To confirm we have all (most) run trips, we pull AVL data. The AVL data is generated by buses reporting their geolocation every 8 seconds while in service. We can use this data to find all <em>observed</em> trips from 2015 to 2018. A single observation of AVL data looks like this:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">date_key</th>
+<th align="right">PICK_END_DATE_KEY</th>
+<th align="left">PICK_START_DATE</th>
+<th align="left">PICK_END_DATE</th>
+<th align="right">trip_tmsk</th>
+<th align="right">block_number</th>
+<th align="right">trip_number</th>
+<th align="left">line_id</th>
+<th align="left">line_direction</th>
+<th align="left">service_id</th>
+<th align="right">time_bracket_start</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">20150101</td>
+<td align="right">20150306</td>
+<td align="left">2014-12-13</td>
+<td align="left">2015-03-06</td>
+<td align="right">1933523</td>
+<td align="right">1119</td>
+<td align="right">1</td>
+<td align="left">10</td>
+<td align="left">South</td>
+<td align="left">HOL</td>
+<td align="right">16080</td>
+</tr>
+</tbody>
+</table>
+<p>To locate trips missing APC records, we simply find trips in the AVL dataset with no corresponding APC record. Such records comprise about 1% (<strong>check at work</strong>) of all APC records. This is a small proportion of trips, but we expect that many “missing data” trips may occur on “unusual” routes – those that are served by older buses or those which occur less frequently or further outside of the urban core (ie, express routes). As there are few such “unusual” routes to begin with, we want to make sure we’re not underrepresenting them by dropping trips with no boarding and alighting.</p>
+<p>We can use the Metro Transit schedule to interpolate appropriate boarding and alighting values for trips missing APC data. For each trip missing an APC record, we randomly sample the boarding and alighting from a different APC record occuring on the same route, in the same direction, at the same stop, with the same type of service, during the same pick (time period). Approximately 50% of missing APC records can be interpolated in this manner. The remaining 50% are dropped because they are not representative of Metro Transit’s service. Trips with no matching trips were likely unscheduled, or were recorded in the AVL data by accident (sometimes buses have their AVL turned on when they are moving from garage to garage, or while they sit still all night).</p>
+<p>The three data sources described above are combined to create a single table with the following columns.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">variable</th>
+<th align="left">meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">date_key</td>
+<td align="left">date of observation</td>
+</tr>
+<tr class="even">
+<td align="left">line_id</td>
+<td align="left">route</td>
+</tr>
+<tr class="odd">
+<td align="left">line_direction</td>
+<td align="left">direction (ie northbound/southbound)</td>
+</tr>
+<tr class="even">
+<td align="left">service_id</td>
+<td align="left">type of service (ie weekday/weekend)</td>
+</tr>
+<tr class="odd">
+<td align="left">site_id</td>
+<td align="left">bus stop id</td>
+</tr>
+<tr class="even">
+<td align="left">board</td>
+<td align="left">number of boardings</td>
+</tr>
+<tr class="odd">
+<td align="left">alight</td>
+<td align="left">number of alightings</td>
+</tr>
+<tr class="even">
+<td align="left">interpolated</td>
+<td align="left">indicates if board and alight were interpolated</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="aggregation" class="section level3">
+<h3>Aggregation</h3>
+<p>Working with 492 billion rows of data is unrealistic. There are a few options for creating a more workable dataset. I opted to aggregate the data over each day. This reduces the data to approximately 23 million rows and ensures that no “edge cases” (such as express routes that only run a few times each week) are dropped as they might be in sampling. This does limit the temporal granularity of the analysis – we can no longer model differences between rush hour and non-rush hour, for example. Such granularity is crucial to transportation planning but generally occurs in the final stages of route planning. For this purpose, variation by day, route, and stop is sufficiently granular.</p>
+<p>The other option is to take a stratified sample, where each strata is a day, route, direction, and stop (ie, all northbound A line stops at Snelling and Grand which occur today). A 10-20% sample taken in this way is fairly representative but can still drop sufficiently small groups.</p>
+<p>Here is a sample of the temporally aggregated data: <div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100"],[20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101,20150101],["10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10"],["North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North","North"],["HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL","HOL"],[14024,14027,14028,14031,14103,14163,14165,14170,14174,14178,14179,14230,14234,14237,14238,14241,14242,14245,14246,14249,14250,14253,14254,14257,14258,14270,14271,14274,14275,14276,14277,14278,14279,14952,14953,14954,17140,17143,17144,17147,17148,17151,17152,17155,17156,17159,17160,17163,17164,17168,17169,17172,17174,17177,17178,17181,17182,17185,17186,17189,17190,17194,17198,17201,17205,17206,17209,17211,17215,17219,17224,17988,17990,17992,17994,17996,17998,17999,19267,19268,19277,19337,40226,40228,40230,40232,40235,40704,40706,40708,40710,40711,40713,40715,40717,40720,40721,40723,40887,40953],[0,0,0,0,0,25,0,0,3,4,0,0,0,1,0,0,0,4,1,0,0,1,2,3,0,2,0,1,0,6,0,0,0,23,6,6,4,17,19,11,6,6,19,7,10,12,2,0,73,4,14,0,17,0,1,0,2,7,3,3,16,31,18,7,16,27,5,0,9,21,16,79,34,303,389,324,57,14,18,25,58,10,3,3,0,4,3,0,1,0,2,0,0,0,0,0,0,3,2,54],[13,13,13,13,13,37,14,14,14,14,14,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,55,55,55,13,52,52,52,52,52,52,52,52,52,52,52,52,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,51,51,51,55,55,55,55,55,55,51,51,14,14,14,14,14,13,13,13,13,13,13,13,13,13,13,13,14,55],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>date_key<\/th>\n      <th>line_id<\/th>\n      <th>line_direction<\/th>\n      <th>service_id<\/th>\n      <th>site_id<\/th>\n      <th>daily_boards<\/th>\n      <th>num_trips<\/th>\n      <th>num_interpolated<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,5,6,7,8]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script></p>
+</div>
+<div id="spatial-aggregation" class="section level3">
+<h3>Spatial Aggregation</h3>
+<p>In addition to temporal aggregation, some spatial aggregation is necessary in order to fit meaningful models. While analyis at the stop level is important, it is difficult to assign covariates to isolated stops. For example, what is the population <em>at</em> a bus stop? I have (tentatively?) chosen to aggregate the bus stops to Census Block level. These areal units are small enough to maintain specificity across the metro area. Margins of error in Census data may be too large at the census block level.</p>
+</div>
+</div>
+<div id="covariates" class="section level2">
+<h2>Covariates</h2>
+</div>
+</div>
+
+  </div>
+
+  <div id=links>
+    
+    
+      <a class="basic-alignment left" href="/post/about-this-project/">About This Project &raquo;</a>
+    
+  </div>
+</section>
+
+  
+</body>
+</html>
+
+
+

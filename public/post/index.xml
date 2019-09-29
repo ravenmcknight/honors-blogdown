@@ -21,12 +21,31 @@
     </item>
     
     <item>
+      <title>Spatial Aggregation</title>
+      <link>/post/spatial-aggregation/</link>
+      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/spatial-aggregation/</guid>
+      <description> # library(data.table) # # apc_bg &amp;lt;- readRDS(&amp;#39;/Users/raven/Documents/honors/honors-work/data/apc_bgs.RDS&amp;#39;) # setDT(apc_bg) # apc_bg &amp;lt;- apc_bg[county == &amp;#39;Scott&amp;#39;] # # apc_bg_buff &amp;lt;- readRDS(&amp;#39;/Users/raven/Documents/honors/honors-work/data/apc_bgs_buff.RDS&amp;#39;) # setDT(apc_bg_buff) </description>
+    </item>
+    
+    <item>
       <title>About This Project</title>
       <link>/post/about-this-project/</link>
       <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/about-this-project/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>The Data</title>
+      <link>/post/the-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/the-data/</guid>
+      <description>The Data Metro Transit Data The ridership variable for this anlysis comes from Metro Transit’s schedule, Automatic Passenger Count (APC), and Automatic Vehicle Location (AVL) data. APC and AVL data are counted by sensors on active vehicles.
+Cleaning Data was pulled from Metro Transit databases for trips ocurring between January 1, 2015 and December 31, 2018. The APC data consists of records of boarding and alighting each time a bus makes a stop and opens its doors.</description>
     </item>
     
   </channel>

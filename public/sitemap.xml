@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/aggregation/</loc>
+    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
+    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/maps/</loc>
     <lastmod>2019-09-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -11,6 +23,12 @@
   <url>
     <loc>/post/motivation/</loc>
     <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/plots/</loc>
+    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -38,7 +56,24 @@
   </url>
   
   <url>
+    <loc>/tags/spatial/</loc>
+    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/spatial-aggregation/</loc>
+    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
+    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/visualization/</loc>
     <lastmod>2019-09-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -58,6 +93,10 @@
   <url>
     <loc>/post/about-this-project/</loc>
     <lastmod>2019-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/the-data/</loc>
   </url>
   
 </urlset>
